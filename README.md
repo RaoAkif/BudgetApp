@@ -1,28 +1,23 @@
-- In `config` folder, open `database.yml` file and Add on line 23, 24, UserName of Database and Password (In my case, in pgAdmin).
-```
-  username: postgres
-  password: 12345
-```
+# Budget App
 
-- Update Application name with `app_name` on line 28, 62, 86, 87 & also in UpperCase `APP_NAME` on line 88.
+> The Budget App is a mobile web application where you can manage your budget.
 
-##### Initialize a DB:
-```
-rails db:create
-```
+This project contains the routes to different views:
+- Splash Page
+- Home Page (Categories)
+- Transactions Page
 
+The `Splash Page` serves as an initial page. From there you can *log in* or *sign up*.
 
-# PROJECT_NAME
+After you successfully log into the app, you will be redirected to the `Home Page`. Here you will have the chance to create categories and view their basic information. From here you can access the `Transactions Page`.
 
-> Description the project.
+Finally, the `Transactions Page` is where you can see the details from all the transactions you have done for a single category. You can access this page by clicking on the *View transactions* link in the `Home Page`
 
 ## Built With
-- Ruby on Rails
-- HTML
-- CSS
-- sqlite3 for the local development
-- Postgresql for the production
-- Heroku for Deployment
+![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
+![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
 
 ## Live Demo (if available)
 
@@ -39,7 +34,7 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 In order to run, you need to install RUBY and Rails in your computer. For windows you can go to [Ruby installer](https://rubyinstaller.org/) and for MAC and LINUX you can go to [Ruby official site](https://www.ruby-lang.org/en/downloads/) for intructions on how to intall it.
 
-Then you can clone the project by typing ```git clone https://github.com/RaoAkif/PROJECT_NAME```
+Then you can clone the project by typing ```git clone https://github.com/RaoAkif/BudgetApp```
 
 ### Run app
 - Type ```bundle install``` in the root file of the project. 
