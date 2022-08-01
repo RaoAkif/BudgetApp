@@ -41,7 +41,11 @@ Clone the repository with
  ```
  cd BudgetApp
  ```
-Install the packages with (Remove the conflicts for ruby version. Either update your machine's version, or the project's one)
+Install the packages with (Remove the conflicts for ruby version. Either update your machine's version, or the project's one). To update the packages, run
+```
+bundle update rails
+```
+To simple install the packages, run
 ```
 bundle install
 ```
