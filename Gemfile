@@ -75,3 +75,6 @@ end
 
 # Others
 gem 'ffi'
+
+# Authentication Gem
+gem 'devise'

@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <nav>
+    <a href="/">Categories</a>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete  %>
+    <span>Logged in as: <%= current_user.email%></span>
+  </nav>
+<%end%>
