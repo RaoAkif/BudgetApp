@@ -1,0 +1,61 @@
+// Overrides.css.scss
+$default-bg: #F5F6F8;
+$primary-color: #3778c2;
+$secondary-color: #5fb523;
+$heading-color: #434b54;
+$para-color: #434b54;
+
+// import the Bootstrap Sprockets before Bootstrap framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+// @import url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+// @import url(//fonts.googleapis.com/earlyaccess/notonastaliqurdudraft.css);
+// @import url(//fonts.googleapis.com/earlyaccess/notosansdevanagariui.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskufiarabic.css);
+
+
+* {
+  background-color: $default-bg;
+}
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30vh;
+}
+
+.splash-text {
+  // font-family: 'Noto Naskh Arabic', serif;
+  // font-family: 'Noto Nastaliq Urdu Draft', serif;
+  // font-family: 'Noto Sans Devanagari UI', sans-serif;
+  font-family: 'Noto Sans Kufi Arabic', sans-serif;
+  font-size: 5em;
+  direction: rtl;
+}
+
+.reg-buttons-div {
+  margin-top: 25vh;
+}
+
+.reg-buttons-div > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 7vh;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.login-btn {
+  background-color: $primary-color;
+}
+
+.reg-btn {
+  background-color: $secondary-color;
+}
