@@ -9,7 +9,9 @@
   </head>
 
   <body>
-    <%= render 'layouts/navigation' %>
+    <% unless current_page?(root_path) %>
+    <%= render 'partials/navigation' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

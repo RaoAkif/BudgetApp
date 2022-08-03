@@ -6,6 +6,7 @@ $heading-color: #434b54;
 $para-color: #434b54;
 
 // import the Bootstrap Sprockets before Bootstrap framework
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 // @import url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
@@ -13,6 +14,9 @@ $para-color: #434b54;
 // @import url(//fonts.googleapis.com/earlyaccess/notosansdevanagariui.css);
 @import url(//fonts.googleapis.com/earlyaccess/notosanskufiarabic.css);
 
+.pt-30 {
+  padding-top: 30px;
+}
 
 * {
   background-color: $default-bg;
@@ -22,7 +26,7 @@ $para-color: #434b54;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30vh;
+  margin-top: 25vh;
 }
 
 .splash-text {
@@ -52,10 +56,82 @@ $para-color: #434b54;
   font-size: 1.5em;
 }
 
+.btn {
+  width: 90vw;
+  height: 7vh;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  margin: auto;
+}
+
 .login-btn {
   background-color: $primary-color;
 }
 
 .reg-btn {
   background-color: $secondary-color;
+}
+
+.shared-links {
+  background-color: $default-bg;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.shared-links:first-child {
+  padding-top: 30px;
+}
+
+.form-field {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: none;
+}
+
+header {
+  background-color: $primary-color;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list {
+  background-color: $primary-color;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-list > * {
+  background-color: $primary-color;
+}
+
+.navbar-list > * > * {
+  background-color: $primary-color;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+form {
+  padding-top: 15px;
+}
+
+.form-field {
+  border: none;
+  background-color: white;
+  margin-top: 5px;
+  height: 60px;
+  color: $default-bg
 }

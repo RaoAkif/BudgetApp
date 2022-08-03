@@ -1,8 +1,0 @@
-<% if user_signed_in? %>
-  <nav>
-    <a href="/">Categories</a> | 
-    <span>Logged in as: <%= current_user.email%></span> | 
-    <%= link_to 'Edit User', edit_user_registration_path, method: :update  %> | 
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete  %>
-  </nav>
-<%end%>
