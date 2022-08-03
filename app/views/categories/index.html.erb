@@ -1,5 +1,6 @@
 <div class="page-body">
-  <br><br><br><br><br>
+  <br><br>
+  <%= render 'partials/page_header' %>
   <% @categories.each do |category| %>
     <%= link_to category do %>
       <div class="page-items-list">

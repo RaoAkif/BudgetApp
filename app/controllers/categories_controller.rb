@@ -2,7 +2,11 @@ class CategoriesController < ApplicationController
 before_action :set_category, only: %i[edit update show destroy]
 
   def index
-    @categories = Category.all
+    @categories = Category.where(user_id: current_user.id)
+  end
+  
+  def show
+    @transactions = @category.transactions.where(user_id: current_user.id)
   end
 
   def new
@@ -13,12 +17,16 @@ before_action :set_category, only: %i[edit update show destroy]
 
   def create
     @category = Category.new(category_params)
-    @category.user_id = current_user.id
-    if @category.save
-      flash[:notice] = 'Category was successfully created'
-      redirect_to categories_path
-    else
-      render 'new'
+    @category.user = current_user
+    
+    respond_to do |format|
+      if @category.save
+        format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
+        format.json { render :show, status: :created, location: @category }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -30,8 +38,6 @@ before_action :set_category, only: %i[edit update show destroy]
       render 'edit'
     end
   end
-
-  def show; end
 
   def destroy
     @category.destroy
