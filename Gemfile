@@ -43,7 +43,7 @@ gem 'tzinfo-data'
 gem 'bootsnap', require: false
 
 # Fontawesome
-gem "font-awesome-rails"
+gem "font-awesome-sass", "~> 6.1.2"
 
 # Use Sass to process CSS
 gem 'bootstrap-sass', '~> 3.4.1'

@@ -88,23 +88,20 @@ $para-color: #434b54;
   padding-top: 30px;
 }
 
-.form-field {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.8rem;
-  border: none;
-}
-
 header {
   background-color: $primary-color;
   height: 10vh;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .navbar-list {
   background-color: $primary-color;
-  padding-left: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 0;
   width: 100vw;
   display: flex;
@@ -129,9 +126,29 @@ form {
 }
 
 .form-field {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: none;
   border: none;
   background-color: white;
+  color: $heading-color;
   margin-top: 5px;
   height: 60px;
-  color: $default-bg
+}
+
+.fa {
+  background: $primary-color;
+  font-size: 26px;
+}
+
+.bottom-button {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  border: none;
 }
