@@ -1,0 +1,41 @@
+<%if current_user%>
+  <% if current_page?(categories_path) %>
+    <%= link_to root_path, class:"link_li" do %>
+      <i class="fa fa-regular fa-bars"></i>
+    <% end %>
+  <% else %>
+    <% if @category %>
+      <% if @category.id == nil && current_page?(new_category_path) %>
+        <%= link_to categories_path, class:"link_li" do %>
+          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+        <% end %>
+      <% end %>
+      <% if @category.id != nil && current_page?(category_path(@category)) %>
+        <%= link_to categories_path, class:"link_li" do %>
+          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+        <% end %>
+      <% end %>
+      <% if @category.id != nil && current_page?(edit_category_path(@category)) %>
+        <%= link_to category_path(@category), class:"link_li" do %>
+          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% if @transaction && @category %>
+      <% if @transaction.id == nil && current_page?(new_category_transaction_path(@category)) %>
+        <%= link_to category_path(@category), class:"link_li" do %>
+          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+        <% end %>
+      <% end %>
+      <% if @transaction.id != nil && current_page?(edit_category_transaction_path(@category, @transaction)) %>
+        <%= link_to category_path(@category), class:"link_li" do %>
+          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= link_to root_path, class:"link_li" do %>
+    <span class="iconify" data-icon="bx:menu"></span>
+  <% end %>
+<%end%>

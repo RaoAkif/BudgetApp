@@ -137,7 +137,7 @@ form {
   height: 60px;
 }
 
-.fa {
+.fa-bars {
   background: $primary-color;
   font-size: 26px;
 }
@@ -176,4 +176,43 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.svg-icon {
+  height: 25px;
+}
+
+.show-page-icon {
+  width: 50px;
+  background: $primary-color;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.transaction-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+  font-size: 20px;
+}
+
+.transaction-header > * {
+  background-color: white;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.category-header-details > * {
+  background-color: white;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.blank-div {
+  background: $default-bg;
+  height: 20px;
 }

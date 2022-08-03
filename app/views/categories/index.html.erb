@@ -1,13 +1,15 @@
 <div class="page-body">
   <br><br><br><br><br>
   <% @categories.each do |category| %>
-    <div class="page-items-list">
-      <div class="category-details">
-        <%= image_tag "#{category.icon}", style: 'height:50px; width:50px;' %>
-        <div><%= category.name %></div>
+    <%= link_to category do %>
+      <div class="page-items-list">
+        <div class="category-details">
+          <%= image_tag "#{category.icon}", style: 'height:50px; width:50px;' %>
+          <div><%= category.name %></div>
+        </div>
+        <div><%= %>$20</div>
       </div>
-      <div><%= %>$20</div>
-    </div>
+    <% end %>
   <% end %>
   <button><%= link_to "Add a Category", new_category_path, class: "btn login-btn bottom-button" %></button>
 </div>

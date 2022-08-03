@@ -1,0 +1,19 @@
+<div class="page-body">
+<div style="background: white">
+  <br><br><br><br><br>
+  <div class="transaction-header">
+    <div class="category-header-details">
+      <div><%= image_tag "#{@category.icon}", class: "show-page-icon" %></div>
+      <div><%= @category.name %></div>
+    </div>
+    <div>
+      $18.00
+    </div>
+  </div>
+  <br>
+</div>
+  <div class="blank-div"></div>
+<div style="margin-top: 20px; height: 30vh; background: white">
+</div>
+<div><%= link_to "Add a Transaction", new_category_transaction_path(@category), class: "btn login-btn bottom-button" %></div>
+</div>
