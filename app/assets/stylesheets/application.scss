@@ -152,3 +152,33 @@ form {
   border-radius: 0;
   border: none;
 }
+
+.page-body {
+  position: absolute;
+  top: 12vh;
+}
+
+.page-items-list {
+  display: flex;
+  align-items: center;
+  width: 95vw;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  margin: 10px;
+}
+
+.page-items-list > * {
+  background-color: white;
+}
+
+.page-items-list > * > * {
+  background-color: white;
+}
+
+.category-details {
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
