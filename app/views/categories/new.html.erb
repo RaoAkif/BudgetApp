@@ -1,21 +1,22 @@
+<br>
+<br>
+<br>
+<br>
 <%= form_with(model: @category) do |form| %>
-  <h2 class="form_title">Add a Category</h2>
 
   <section class="form-section">
-    <p class="input-text"><%= form.label :name %>:</p>
     <%= form.text_field :name,
     class: "text_input",
-    placeholder: "Write name of Category..." %>
+    placeholder: "Name of Category...", class: "form-field" %>
   </section>
 
   <section class="form-section">
-    <p class="text_field"><%= form.label :icon %></p>
     <%= form.text_field :icon,
     class: "text_input",
-    placeholder: "Paste link of icon..." %>
+    placeholder: "Link of icon...", class: "form-field" %>
   </section>
 
-  <section class="form-section">
-    <%= form.submit class: "submit_button" %>
+  <section class="actions pt-30">
+    <%= form.submit "Add Category", class: "btn login-btn" %>
   </section>
 <% end %>

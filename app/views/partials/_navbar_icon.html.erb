@@ -1,7 +1,7 @@
 <%if current_user%>
   <% if current_page?(categories_path) %>
     <%= link_to root_path, class:"link_li" do %>
-      <i class="fa fa-regular fa-bars"></i>
+      <%= image_tag("hamburger.svg", :alt => "hamburger", :class => "svg-icon-ham") %>
     <% end %>
   <% else %>
     <% if @category %>

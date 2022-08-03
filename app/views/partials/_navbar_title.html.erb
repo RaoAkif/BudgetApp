@@ -26,11 +26,11 @@
 
 <% if @transaction && @category %>
   <% if @transaction.id == nil && current_page?(new_category_transaction_path(@category)) %>
-    NEW EXPENSE
+    NEW TRANSACTION
   <% end %>
 
   <% if @transaction.id != nil && current_page?(edit_category_transaction_path(@category, @transaction)) %>
-    EDIT EXPENSE
+    EDIT TRANSACTION
   <% end %>
 <% end %>
 

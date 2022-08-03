@@ -1,18 +1,18 @@
 <br>
 <br>
 <br>
-<h1>Add New Transtion Form</h1>
+<br>
 
 <%= form_with(model: [@category, @transaction]) do |form| %>
   <div class="field">
-    <%= form.text_field :name, value: @transaction.name, placeholder: "Name", required: true, class: "form_field" %>
+    <%= form.text_field :name, value: @transaction.name, placeholder: "Name", required: true, class: "form-field" %>
   </div>
 
   <div class="field">
-    <%= form.text_field :amount, value: @transaction.amount, placeholder: "Amount", type: "float", required: true, class: "form_field" %>
+    <%= form.text_field :amount, value: @transaction.amount, placeholder: "Amount", type: "float", required: true, class: "form-field" %>
   </div>
 
-  <div>
-    <%= form.submit "Save", class: "app_button green_button" %>
+  <div class="actions pt-30">
+    <%= form.submit "Add Transaction", class: "btn login-btn" %>
   </div>
 <% end %>
