@@ -199,7 +199,7 @@ form {
   width: 100%;
   justify-content: space-between;
   background-color: white;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .transaction-header > * {
@@ -220,4 +220,21 @@ form {
 .blank-div {
   background: $default-bg;
   height: 20px;
+}
+
+.a-transaction {
+  height: 10vh;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.a-transaction > * {
+  padding-right: 10px;
+  background: white;
 }
