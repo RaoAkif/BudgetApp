@@ -3,16 +3,4 @@
 <br>
 <br>
 
-<%= form_with(model: [@category, @transaction]) do |form| %>
-  <div class="field">
-    <%= form.text_field :name, value: @transaction.name, placeholder: "Name", required: true, class: "form-field" %>
-  </div>
-
-  <div class="field">
-    <%= form.text_field :amount, value: @transaction.amount, placeholder: "Amount", type: "float", required: true, class: "form-field" %>
-  </div>
-
-  <div class="actions pt-30">
-    <%= form.submit "Add Transaction", class: "btn login-btn" %>
-  </div>
-<% end %>
+<%= render "form", category: @category %>

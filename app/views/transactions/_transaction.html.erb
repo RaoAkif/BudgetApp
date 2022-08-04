@@ -1,0 +1,10 @@
+<% @transactions.each do |transaction| %>
+  <%= link_to 'transaction' do %>
+    <div>
+      <div>
+        <div><%= transaction.name %></div>
+        <div><%= transaction.amount %></div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

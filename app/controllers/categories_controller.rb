@@ -6,7 +6,7 @@ before_action :set_category, only: %i[edit update show destroy]
   end
   
   def show
-    @transactions = @category.transactions.where(user_id: current_user.id)
+    @transactions = Transaction.all
   end
 
   def new
@@ -17,11 +17,11 @@ before_action :set_category, only: %i[edit update show destroy]
 
   def create
     @category = Category.new(category_params)
-    @category.user = current_user
+    @category.user_id = current_user.id
     
     respond_to do |format|
       if @category.save
-        format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
+        format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  # before_action :set_category, only: %i[new create edit update show destroy]
+  before_action :set_category, only: %i[new create edit update show destroy]
   before_action :set_transaction, only: %i[edit update update destroy]
   
     def index
@@ -9,27 +9,26 @@ class TransactionsController < ApplicationController
     def show; end
 
     def new
-      @category = Category.find(params[:category_id])
       @transaction = Transaction.new
-      @categories = Category.where(user_id: current_user.id)
     end
 
     def edit; end
   
     def create
       @transaction = Transaction.new(transaction_params)
-      @transaction.user = current_user
+      @transaction.user_id = current_user.id
+  
       respond_to do |format|
         if @transaction.save
           format.html { redirect_to @category, notice: 'Transaction was successfully created.' }
-          format.json { render :show, status: :created, location: @category }
+          format.json { render :show, status: :created, location: @transaction }
         else
           format.html { render :new, status: :unprocessable_entity }
           format.json { render json: @transaction.errors, status: :unprocessable_entity }
         end
       end
     end
-  
+
     def update
       if @transaction.update(transaction_params)
         flash[:notice] = 'Transaction was successfully updated'
@@ -56,7 +55,7 @@ class TransactionsController < ApplicationController
     end
 
     def set_transaction
-      @transaction = Transaction.find(params[:id])
+      @transaction = Transaction.find(params[:id]).merge(user_id: current_user.id)
     end
   end
   
