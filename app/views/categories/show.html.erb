@@ -1,20 +1,23 @@
 <div class="page-body">
-<div style="background: white">
-  <br><br><br><br><br>
-  <div class="transaction-header">
-    <div class="category-header-details">
-      <div><%= image_tag "#{@category.icon}", class: "show-page-icon" %></div>
-      <div><%= @category.name %></div>
+  <div style="background: white">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="payment-header">
+      <div class="category-header-details">
+        <div><%= image_tag "#{@category.icon}", class: "show-page-icon" %></div>
+        <div><%= @category.name %></div>
+      </div>
+      <div>
+        $18.00
+      </div>
     </div>
-    <div>
-      $18.00
-    </div>
+    <br>
   </div>
-  <br>
-</div>
-<div class="blank-div"></div>
-
-  <%= render 'transactions/transaction' %>
-
-<%= link_to "Add a Transaction", new_category_transaction_path(@category), class: "btn login-btn bottom-button" %>
+  <div class="blank-div"></div>
+  <h2>Expenses</h2>
+  <%= render @category.payments.order(created_at: :desc) %>
+  <%= link_to "Add a Payment", new_category_payment_path(@category), class: "btn login-btn bottom-button" %>
 </div>

@@ -194,7 +194,7 @@ form {
   padding: 10px;
 }
 
-.transaction-header {
+.payment-header {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -202,7 +202,7 @@ form {
   font-size: 25px;
 }
 
-.transaction-header > * {
+.payment-header > * {
   background-color: white;
   display: flex;
   padding-left: 10px;
@@ -222,7 +222,7 @@ form {
   height: 20px;
 }
 
-.a-transaction {
+.a-payment {
   height: 10vh;
   background: white;
   display: flex;
@@ -234,7 +234,7 @@ form {
   margin-bottom: 10px;
 }
 
-.a-transaction > * {
+.a-payment > * {
   padding-right: 10px;
   background: white;
 }

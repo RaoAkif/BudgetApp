@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories do
-    resources :transactions
+    resources :payments
   end
 
   resources :users

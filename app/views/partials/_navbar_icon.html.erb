@@ -21,13 +21,13 @@
         <% end %>
       <% end %>
     <% end %>
-    <% if @transaction && @category %>
-      <% if @transaction.id == nil && current_page?(new_category_transaction_path(@category)) %>
+    <% if @payment && @category %>
+      <% if @payment.id == nil && current_page?(new_category_payment_path(@category)) %>
         <%= link_to category_path(@category), class:"link_li" do %>
           <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
         <% end %>
       <% end %>
-      <% if @transaction.id != nil && current_page?(edit_category_transaction_path(@category, @transaction)) %>
+      <% if @payment.id != nil && current_page?(edit_category_payment_path(@category, @payment)) %>
         <%= link_to category_path(@category), class:"link_li" do %>
           <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
         <% end %>
