@@ -13,6 +13,10 @@ After you successfully log into the app, you will be redirected to the `Home Pag
 
 Finally, the `Transactions Page` is where you can see the details from all the transactions you have done for a single category. You can access this page by clicking on the *View transactions* link in the `Home Page`
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/61361037/183267947-dca17e8a-5963-45cd-8bca-9ed152166cbf.PNG" />
+</p>
+
 ## Built With
 ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
 ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
