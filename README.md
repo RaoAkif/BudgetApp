@@ -87,20 +87,17 @@ rspec
 - LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
 
 ## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to my peers who are always there to offer support.
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
 
 ## 📝 License
 
