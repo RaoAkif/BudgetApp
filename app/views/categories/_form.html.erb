@@ -1,0 +1,18 @@
+<%= render 'partials/page_header' %>
+<%= form_with(model: @category) do |form| %>
+  <section class="form-section">
+    <%= form.text_field :name,
+    class: "text_input",
+    placeholder: "Name of Category...", class: "form-field" %>
+  </section>
+
+  <section class="form-section">
+    <%= form.text_field :icon,
+    class: "text_input",
+    placeholder: "Link of icon...", class: "form-field" %>
+  </section>
+
+  <section class="actions pt-30">
+    <%= form.submit "Add Category", class: "btn login-btn" %>
+  </section>
+<% end %>
