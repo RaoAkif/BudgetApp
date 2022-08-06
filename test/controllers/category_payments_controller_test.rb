@@ -18,7 +18,8 @@ class CategoryPaymentsControllerTest < ActionDispatch::IntegrationTest
   test 'should create category_payment' do
     assert_difference('CategoryPayment.count') do
       post category_payments_url,
-           params: { category_payment: { payment_id: @category_payment.payment_id, category_id: @category_payment.category_id } }
+           params: { category_payment: { payment_id: @category_payment.payment_id,
+                                         category_id: @category_payment.category_id } }
     end
 
     assert_redirected_to category_payment_url(CategoryPayment.last)
@@ -36,7 +37,8 @@ class CategoryPaymentsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update category_payment' do
     patch category_payment_url(@category_payment),
-          params: { category_payment: { payment_id: @category_payment.payment_id, category_id: @category_payment.category_id } }
+          params: { category_payment: { payment_id: @category_payment.payment_id,
+                                        category_id: @category_payment.category_id } }
     assert_redirected_to category_payment_url(@category_payment)
   end
 
