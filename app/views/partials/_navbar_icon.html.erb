@@ -34,6 +34,6 @@
   <% end %>
 <% else %>
   <%= link_to root_path, class:"link_li" do %>
-    <span class="iconify" data-icon="bx:menu"></span>
+    <%= image_tag("hamburger.svg", :alt => "hamburger", :class => "svg-icon-ham") %>
   <% end %>
 <%end%>
