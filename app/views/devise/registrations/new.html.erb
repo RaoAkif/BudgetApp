@@ -1,0 +1,20 @@
+<%= render 'partials/page_header' %><br>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, placeholder: "Full name", class: "form-field" %>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "form-field" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-field" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Retype Password", class: "form-field" %>
+  </div>
+  <div class="actions pt-30">
+    <%= f.submit "Sign up", class: "btn reg-btn" %>
+  </div>
+<%= render "devise/shared/links" %>
+<% end %>

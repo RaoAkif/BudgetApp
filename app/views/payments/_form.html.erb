@@ -1,0 +1,16 @@
+<br>
+<br>
+<br>
+<div>
+  <%= form_with(model: [@category, @payment]) do |form| %>
+    <div class="field">
+      <%= form.text_field :name, value: @payment.name, placeholder: "Name", required: true, class: "form-field" %>
+    </div>
+    <div class="field">
+      <%= form.text_field :amount, value: @payment.amount, placeholder: "Amount", type: "float", required: true, class: "form-field" %>
+    </div>
+    <div class="actions pt-30">
+      <%= form.submit "Add Payment", class: "btn login-btn" %>
+    </div>
+  <% end %>
+</div>

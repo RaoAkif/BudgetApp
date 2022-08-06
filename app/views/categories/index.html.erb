@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+  <br>
+  <%= render 'partials/page_header' %>
+  <% @categories.each do |category| %>
+    <%= link_to category do %>
+      <div class="page-items-list">
+        <div class="category-details">
+          <%= image_tag "#{category.icon}", style: 'height:50px; width:50px;' %>
+          <div><%= category.name %></div>
+        </div>
+        <div>$<%= category.total_amount %></div>
+      </div>
+    <% end %>
+  <% end %>
+  <div><%= link_to "Add a Category", new_category_path, class: "btn login-btn bottom-button" %></div>
+</div>

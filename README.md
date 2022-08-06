@@ -97,3 +97,13 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+Hamburger
+<i class="fa fa-regular fa-bars"></i>
+
+<i class="fa-regular fa-arrow-left"></i>
+
+Replaced Code:
+<div><%= button_to "Delete Category", category_path(current_user, category.id), method: :delete %></div>
+
+<%= image_tag("trash.svg", :alt => "DELETE", :class => "svg-icon") %>
