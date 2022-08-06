@@ -52,7 +52,6 @@ $para-color: #434b54;
   border-radius: 5px;
   color: white;
   margin-top: 20px;
-  display: flex;
   justify-content: center;
   font-size: 1.5em;
 }
@@ -62,7 +61,6 @@ $para-color: #434b54;
   height: 7vh;
   border-radius: 5px;
   color: white;
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   font-size: 1.5em;
@@ -130,7 +128,6 @@ form {
   width: 100%;
   padding: 1rem;
   font-size: 1.8rem;
-  border: none;
   border: none;
   background-color: white;
   color: $heading-color;
