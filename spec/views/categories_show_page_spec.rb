@@ -16,7 +16,7 @@ RSpec.describe 'Category Show Page', type: :feature do
       name: 'Shopping',
       icon: 'https://img.icons8.com/color/480/000000/shopping-cart-loaded.png'
     )
- 
+
     (1..5).each do |id|
       @category.payments.create(
         author_id: @user.id,
