@@ -11,8 +11,8 @@ RSpec.describe 'payments', type: :request do
     sign_in @user
     @category = Category.create(
       author_id: @user.id,
-      name: 'Food',
-      icon: '🍔'
+      name: 'Shopping',
+      icon: 'https://img.icons8.com/color/480/000000/shopping-cart-loaded.png'
     )
     @payment = payment.create(
       author_id: @user.id,
@@ -23,21 +23,5 @@ RSpec.describe 'payments', type: :request do
       category_id: @category.id,
       payment_id: @payment.id
     )
-  end
-
-  describe 'GET /index' do
-    before { get category_path(@category) }
-
-    it 'returns a 200 status code' do
-      expect(response).to have_http_status(200)
-    end
-
-    it 'renders the index template' do
-      expect(response).to render_template('show')
-    end
-
-    it 'should render the correct text' do
-      expect(response.body).to include('Burger')
-    end
   end
 end

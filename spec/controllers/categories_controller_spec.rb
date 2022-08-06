@@ -11,8 +11,8 @@ RSpec.describe 'categories', type: :request do
     sign_in @user
     Category.create(
       author_id: @user.id,
-      name: 'Food',
-      icon: '🍔'
+      name: 'Shopping',
+      icon: 'https://img.icons8.com/color/480/000000/shopping-cart-loaded.png'
     )
   end
 
@@ -28,7 +28,7 @@ RSpec.describe 'categories', type: :request do
     end
 
     it 'should render the correct text' do
-      expect(response.body).to include('Food')
+      expect(response.body).to include('Shopping')
     end
   end
 end
