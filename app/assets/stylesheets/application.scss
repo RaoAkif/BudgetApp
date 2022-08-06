@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=proxima-nova:thin,extra-light,light,bold,100,200,300,400,500,600,700,800');
+@import url("https://fonts.googleapis.com/css?family=proxima-nova:thin,extra-light,light,bold,100,200,300,400,500,600,700,800");
 @import url(//fonts.googleapis.com/earlyaccess/notosanskufiarabic.css);
 @import "font-awesome";
 @import "bootstrap-sprockets";
@@ -9,13 +9,13 @@ $background: #f1f3f2;
 $second: #5fb523;
 $text: #434654;
 
-$default-bg: #F5F6F8;
+$default-bg: #f5f6f8;
 $primary-color: #3778c2;
 $secondary-color: #5fb523;
 $heading-color: #434b54;
 $para-color: #434b54;
 
-$proxima-nova: 'proxima-nova', sans-serif;
+$proxima-nova: "proxima-nova", sans-serif;
 
 * {
   box-sizing: border-box;
@@ -339,7 +339,7 @@ body {
   // font-family: 'Noto Naskh Arabic', serif;
   // font-family: 'Noto Nastaliq Urdu Draft', serif;
   // font-family: 'Noto Sans Devanagari UI', sans-serif;
-  font-family: 'Noto Sans Kufi Arabic', sans-serif;
+  font-family: "Noto Sans Kufi Arabic", sans-serif;
   font-size: 5em;
   direction: rtl;
 }
@@ -348,7 +348,7 @@ body {
   margin-top: 25vh;
 }
 
-.reg-buttons-div>* {
+.reg-buttons-div > * {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -416,11 +416,11 @@ header {
   list-style: none;
 }
 
-.navbar-list>* {
+.navbar-list > * {
   background-color: $primary-color;
 }
 
-.navbar-list>*>* {
+.navbar-list > * > * {
   background-color: $primary-color;
   color: white;
   font-size: 20px;
@@ -469,11 +469,11 @@ form {
   margin: 10px;
 }
 
-.page-items-list>* {
+.page-items-list > * {
   background-color: white;
 }
 
-.page-items-list>*>* {
+.page-items-list > * > * {
   background-color: white;
 }
 
@@ -508,7 +508,7 @@ form {
   font-size: 25px;
 }
 
-.payment-header>* {
+.payment-header > * {
   background-color: white;
   display: flex;
   padding-left: 10px;
@@ -516,7 +516,7 @@ form {
   align-items: center;
 }
 
-.category-header-details>* {
+.category-header-details > * {
   background-color: white;
   display: flex;
   padding-left: 10px;
@@ -540,12 +540,12 @@ form {
   margin-bottom: 10px;
 }
 
-.a-payment>* {
+.a-payment > * {
   padding-right: 10px;
   background: white;
 }
 
-.card-link>* {
+.card-link > * {
   width: 95vw;
   display: flex;
   justify-content: space-between;
@@ -554,7 +554,7 @@ form {
   margin: 10px auto;
 }
 
-.card-link> * > * {
+.card-link > * > * {
   display: flex;
   background-color: white;
 }
