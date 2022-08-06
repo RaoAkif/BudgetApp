@@ -1,0 +1,18 @@
+<div class="page-body">
+  <div style="background: white">
+  <%= render 'partials/page_header' %><br><br>
+    <div class="payment-header">
+      <div class="category-header-details">
+        <div><%= image_tag "#{@category.icon}", class: "show-page-icon" %></div>
+        <div><%= @category.name %></div>
+      </div>
+      <div>
+        <%= @category.total_amount %>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="blank-div"></div>
+  <%= render @category.payments.order(created_at: :desc) %>
+  <%= link_to "Add a Payment", new_category_payment_path(@category), class: "btn login-btn bottom-button" %>
+</div>
