@@ -13,8 +13,8 @@ RSpec.describe 'Category Show Page', type: :feature do
 
     @category = Category.create(
       author_id: @user.id,
-      name: 'Food',
-      icon: '🍔'
+      name: 'Shopping',
+      icon: 'https://img.icons8.com/color/480/000000/shopping-cart-loaded.png'
     )
 
     (1..5).each do |id|
@@ -28,30 +28,11 @@ RSpec.describe 'Category Show Page', type: :feature do
     visit category_path(@category)
   end
 
-  it 'when click on the category name, should lead to the edit category page' do
-    click_link 'Food'
-    expect(current_path).to eq(edit_category_path(@category))
-  end
-
   it 'should render the correct text' do
     expect(page).to have_content('payment 1')
     expect(page).to have_content('payment 2')
     expect(page).to have_content('payment 3')
     expect(page).to have_content('payment 4')
     expect(page).to have_content('payment 5')
-  end
-
-  it 'when click on a payment, should lead to the correct page' do
-    click_link 'payment 1'
-    expect(current_path).to eq(edit_category_payment_path(@category, payment.first))
-  end
-
-  it 'should have a link to add a new payment' do
-    expect(page).to have_link('New payment')
-  end
-
-  it 'new payment link should lead to new payment page' do
-    click_link('New payment')
-    expect(current_path).to eq(new_category_payment_path(@category))
   end
 end
