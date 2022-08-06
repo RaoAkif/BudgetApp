@@ -1,23 +1,18 @@
 <div class="page-body">
   <div style="background: white">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  <%= render 'partials/page_header' %><br><br>
     <div class="payment-header">
       <div class="category-header-details">
         <div><%= image_tag "#{@category.icon}", class: "show-page-icon" %></div>
         <div><%= @category.name %></div>
       </div>
       <div>
-        $18.00
+        <%= @category.total_amount %>
       </div>
     </div>
     <br>
   </div>
   <div class="blank-div"></div>
-  <h2>Expenses</h2>
   <%= render @category.payments.order(created_at: :desc) %>
   <%= link_to "Add a Payment", new_category_payment_path(@category), class: "btn login-btn bottom-button" %>
 </div>

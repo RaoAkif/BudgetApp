@@ -1,18 +1,324 @@
-// Overrides.css.scss
+@import url('https://fonts.googleapis.com/css?family=proxima-nova:thin,extra-light,light,bold,100,200,300,400,500,600,700,800');
+@import url(//fonts.googleapis.com/earlyaccess/notosanskufiarabic.css);
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$main: #3778c2;
+$background: #f1f3f2;
+$second: #5fb523;
+$text: #434654;
+
 $default-bg: #F5F6F8;
 $primary-color: #3778c2;
 $secondary-color: #5fb523;
 $heading-color: #434b54;
 $para-color: #434b54;
 
-// import the Bootstrap Sprockets before Bootstrap framework
-@import "font-awesome";
-@import "bootstrap-sprockets";
-@import "bootstrap";
-// @import url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
-// @import url(//fonts.googleapis.com/earlyaccess/notonastaliqurdudraft.css);
-// @import url(//fonts.googleapis.com/earlyaccess/notosansdevanagariui.css);
-@import url(//fonts.googleapis.com/earlyaccess/notosanskufiarabic.css);
+$proxima-nova: 'proxima-nova', sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $proxima-nova;
+  color: $text;
+  background: $background;
+}
+
+// main {
+//   padding: 0 1rem;
+//   padding-top: 0.5rem;
+// }
+
+.menu_ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 1rem;
+  background: $main;
+}
+
+.menu_li {
+  color: white;
+  font-size: 1.2rem;
+
+  p {
+    font-weight: bold;
+  }
+}
+
+.link_li {
+  color: white;
+  text-decoration: none;
+}
+
+.iconify {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form_field {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.remember_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.app_button {
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.app_button:hover {
+  opacity: 0.8;
+}
+
+.green_button {
+  background: $second;
+}
+
+.standard_button {
+  background: $background;
+  color: $text;
+}
+
+.red_button {
+  background: red;
+}
+
+.splash_buttons {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: 1%;
+
+  a {
+    width: 45%;
+    text-align: center;
+  }
+}
+
+.else_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: 100%;
+
+  a {
+    color: $text;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.5;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+}
+
+.category_button {
+  background: $second;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.cards_list {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  margin-bottom: 5rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.card_link {
+  text-decoration: none;
+  color: $text;
+}
+
+.category_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  padding: 1.25rem 1rem;
+  background: white;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.category_card_left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.category_icon {
+  font-size: 3rem;
+}
+
+.select_icon {
+  display: flex;
+  margin-bottom: 1rem;
+
+  select {
+    background: white;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+.select_icon_label {
+  background: white;
+  color: #b3b3b3;
+  font-size: 1rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.splash {
+  background: $main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  h1 {
+    color: $background;
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+
+.category_show {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 100%;
+  gap: 1rem;
+
+  h2 {
+    padding: 0 2rem;
+  }
+}
+
+.app_icon {
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.actions_payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.splash_text {
+  color: $background;
+
+  a {
+    color: $background;
+  }
+}
+
+@media (max-width: 768px) {
+  .app_icon {
+    width: 70%;
+  }
+
+  .select_icon {
+    select {
+      width: 70%;
+    }
+  }
+
+  .select_icon_label {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .app_icon {
+    width: 30%;
+  }
+
+  .splash {
+    padding: 3rem 0;
+  }
+
+  .select_icon {
+    select {
+      width: 85%;
+    }
+  }
+
+  .select_icon_label {
+    width: 15%;
+  }
+}
 
 .pt-30 {
   padding-top: 30px;
@@ -42,7 +348,7 @@ $para-color: #434b54;
   margin-top: 25vh;
 }
 
-.reg-buttons-div > * {
+.reg-buttons-div>* {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,11 +416,11 @@ header {
   list-style: none;
 }
 
-.navbar-list > * {
+.navbar-list>* {
   background-color: $primary-color;
 }
 
-.navbar-list > * > * {
+.navbar-list>*>* {
   background-color: $primary-color;
   color: white;
   font-size: 20px;
@@ -163,11 +469,11 @@ form {
   margin: 10px;
 }
 
-.page-items-list > * {
+.page-items-list>* {
   background-color: white;
 }
 
-.page-items-list > * > * {
+.page-items-list>*>* {
   background-color: white;
 }
 
@@ -202,7 +508,7 @@ form {
   font-size: 25px;
 }
 
-.payment-header > * {
+.payment-header>* {
   background-color: white;
   display: flex;
   padding-left: 10px;
@@ -210,7 +516,7 @@ form {
   align-items: center;
 }
 
-.category-header-details > * {
+.category-header-details>* {
   background-color: white;
   display: flex;
   padding-left: 10px;
@@ -219,7 +525,7 @@ form {
 
 .blank-div {
   background: $default-bg;
-  height: 20px;
+  height: 10px;
 }
 
 .a-payment {
@@ -234,7 +540,25 @@ form {
   margin-bottom: 10px;
 }
 
-.a-payment > * {
+.a-payment>* {
   padding-right: 10px;
   background: white;
+}
+
+.card-link>* {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.card-link> * > * {
+  display: flex;
+  background-color: white;
+}
+
+.category-card > p {
+  margin: 0;
 }

@@ -37,16 +37,16 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  # This option will default to `:apply_to_host_groups` in RSpec 4 (and will
+  # This option will default to `:apply_to_host_categories` in RSpec 4 (and will
   # have no way to turn it off -- the option exists only for backwards
   # compatibility in RSpec 3). It causes shared context metadata to be
-  # inherited by the metadata hash of host groups and examples, rather than
-  # triggering implicit auto-inclusion in groups with matching metadata.
-  config.shared_context_metadata_behavior = :apply_to_host_groups
+  # inherited by the metadata hash of host categories and examples, rather than
+  # triggering implicit auto-inclusion in categories with matching metadata.
+  config.shared_context_metadata_behavior = :apply_to_host_categories
 
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
-  #   # This allows you to limit a spec run to individual examples or groups
+  #   # This allows you to limit a spec run to individual examples or categories
   #   # you care about by tagging them with `:focus` metadata. When nothing
   #   # is tagged with `:focus`, all examples get run. RSpec also provides
   #   # aliases for `it`, `describe`, and `context` that include `:focus`
@@ -63,10 +63,6 @@ RSpec.configure do |config|
   #   # https://relishapp.com/rspec/rspec-core/docs/configuration/zero-monkey-patching-mode
   #   config.disable_monkey_patching!
   #
-  #   # This setting enables warnings. It's recommended, but in some cases may
-  #   # be too noisy due to issues in dependencies.
-  #   config.warnings = true
-  #
   #   # Many RSpec users commonly either run the entire suite or an individual
   #   # file, and it's useful to allow more verbose output when running an
   #   # individual spec file.
@@ -77,7 +73,7 @@ RSpec.configure do |config|
   #     config.default_formatter = "doc"
   #   end
   #
-  #   # Print the 10 slowest examples and example groups at the
+  #   # Print the 10 slowest examples and example categories at the
   #   # end of the spec run, to help surface which specs are running
   #   # particularly slow.
   #   config.profile_examples = 10

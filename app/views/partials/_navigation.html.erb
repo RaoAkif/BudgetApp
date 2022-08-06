@@ -10,7 +10,7 @@
       <li>
         <% if current_user %>
           <%= link_to destroy_user_session_path, method: :delete do %>
-            <span data-icon="charm:sign-out"></span>
+            <%= image_tag("logout.svg", :alt => "arrow-back", :class => "svg-icon-ham") %>
           <% end %>
         <% else %>
           <%= link_to new_user_session_path do %>

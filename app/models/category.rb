@@ -3,7 +3,7 @@ class Category < ApplicationRecord
   has_many :category_payment, dependent: :destroy
   has_many :payments, through: :category_payment
 
-  validates :name, presence: true, length: { minimum: 3, maximum: 50 }
+  validates :name, presence: true
   validates :icon, presence: true
 
   def total_amount

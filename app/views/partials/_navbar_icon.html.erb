@@ -1,35 +1,33 @@
 <%if current_user%>
   <% if current_page?(categories_path) %>
-    <%= link_to root_path, class:"link_li" do %>
-      <%= image_tag("hamburger.svg", :alt => "hamburger", :class => "svg-icon-ham") %>
-    <% end %>
+    <%= image_tag("hamburger.svg", :alt => "hamburger", :class => "svg-icon-ham") %>
   <% else %>
     <% if @category %>
       <% if @category.id == nil && current_page?(new_category_path) %>
         <%= link_to categories_path, class:"link_li" do %>
-          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+          <%= image_tag("arrow-back.svg", :alt => "arrow-back", :class => "svg-icon-ham") %>
         <% end %>
       <% end %>
       <% if @category.id != nil && current_page?(category_path(@category)) %>
         <%= link_to categories_path, class:"link_li" do %>
-          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+          <%= image_tag("arrow-back.svg", :alt => "arrow-back", :class => "svg-icon-ham") %>
         <% end %>
       <% end %>
       <% if @category.id != nil && current_page?(edit_category_path(@category)) %>
         <%= link_to category_path(@category), class:"link_li" do %>
-          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+          <%= image_tag("arrow-back.svg", :alt => "arrow-back", :class => "svg-icon-ham") %>
         <% end %>
       <% end %>
     <% end %>
     <% if @payment && @category %>
       <% if @payment.id == nil && current_page?(new_category_payment_path(@category)) %>
         <%= link_to category_path(@category), class:"link_li" do %>
-          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+          <%= image_tag("arrow-back.svg", :alt => "arrow-back", :class => "svg-icon-ham") %>
         <% end %>
       <% end %>
       <% if @payment.id != nil && current_page?(edit_category_payment_path(@category, @payment)) %>
         <%= link_to category_path(@category), class:"link_li" do %>
-          <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+          <%= image_tag("arrow-back.svg", :alt => "arrow-back", :class => "svg-icon-ham") %>
         <% end %>
       <% end %>
     <% end %>

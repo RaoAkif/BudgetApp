@@ -1,23 +1,38 @@
 require 'rails_helper'
 
-RSpec.describe Payment, type: :model do
+RSpec.describe payment, type: :model do
   before :each do
-    @payment = Payment.create(user_id: 1, name: 'Shopping', amount: 200.50)
+    @user = User.create(
+      name: 'RaoAkif',
+      email: 'akifrao@gmail.com',
+      password: '123456',
+      password_confirmation: '123456'
+    )
+    @payment = payment.create(
+      author_id: @user.id,
+      name: 'Burger',
+      amount: 100
+    )
   end
 
-  describe 'Payment Model Properties' do
-    it 'should not have a nill User ID field' do
-      @payment.user_id = nil
+  describe 'payment Model Properties' do
+    it 'should have an author' do
+      @payment.author_id = nil
       expect(@payment).to_not be_valid
     end
 
-    it 'should not have a nill Name field' do
+    it 'name should be present' do
       @payment.name = nil
       expect(@payment).to_not be_valid
     end
 
-    it 'should not have a nill amount field' do
+    it 'amount should be present' do
       @payment.amount = nil
+      expect(@payment).to_not be_valid
+    end
+
+    it 'amount should be greater than 0' do
+      @payment.amount = 0
       expect(@payment).to_not be_valid
     end
   end

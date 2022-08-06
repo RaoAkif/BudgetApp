@@ -1,5 +1,5 @@
-<div class="page-body">
-  <br><br>
+<p style="color: green"><%= notice %></p>
+  <br>
   <%= render 'partials/page_header' %>
   <% @categories.each do |category| %>
     <%= link_to category do %>
@@ -8,7 +8,7 @@
           <%= image_tag "#{category.icon}", style: 'height:50px; width:50px;' %>
           <div><%= category.name %></div>
         </div>
-        <div><%= %>$20</div>
+        <div>$<%= category.total_amount %></div>
       </div>
     <% end %>
   <% end %>

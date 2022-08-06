@@ -1,8 +1,6 @@
-<%= link_to edit_category_payment_path(@category, payment), class:"card_link" do %>
-  <div>
-    <div class="a-payment">
-      <div><%= payment.name %></div>
-      <div><%= payment.amount %></div>
-    </div>
+ <div class="card-link">
+  <div class="category-card">
+    <p><%= payment.name %></p>
+    <p>$ <%= payment.amount %></p>
   </div>
-<% end %>
+</div>
