@@ -1,6 +1,6 @@
 require 'application_system_test_case'
 
-class paymentsTest < ApplicationSystemTestCase
+class PaymentsTest < ApplicationSystemTestCase
   setup do
     @payment = payments(:one)
   end
