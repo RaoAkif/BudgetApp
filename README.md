@@ -1,6 +1,6 @@
 # Budget App
 
-> The Budget App is a mobile web application where you can manage your budget.
+> A Mobile Web App made with Rails that takes care of your expenses. You can have a record of your expenses by date, category, amount, and others. Has feature and system tests with RSpec and Capybara. Implements authentication with Devise and authorization with CanCanCan. Deployed to Heroku. Uses PostgreSQL and ActiveRecord.
 
 This project contains the routes to different views:
 - Splash Page
